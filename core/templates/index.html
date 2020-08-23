@@ -1,0 +1,530 @@
+{% extends  'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+      <!-- Home section start -->
+        <div class="home-container">
+            <div class="div-1110">
+                <div class="home-content">
+                    <a href="collection/woman/all/">
+                        <div class="main-slider-item">
+                            <div class="slider-item-image">
+                                <picture>
+                                    <source media="(min-width:960px)" srcset="{%static '/media/slides/ipad/01a.png'%}">
+                                    <source media="(min-width:500px)" srcset="{%static '/media/slides/Fever-1-mob.png'%}">
+                                    <img src="{%static '/media/slides/01a_U1O2IZb.png'%}" alt="Flowers" style="width:auto;">
+                                </picture>
+                            </div>
+                            <div class="text-box">
+                                <h1 class="slider-title white">YAZ-YAY<BR> 2020<br>
+                                    <span class="font-light"> </span>
+                                </h1>
+                                <button class="home-btn">Ətraflı</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="collection/man/all/">
+                        <div class="main-slider-item">
+                            <div class="slider-item-image">
+                                <picture>
+                                    <img src="{%static 'media/slides/coper_y6BQopl.png'%}" alt="Flowers" style="width:auto;">
+
+                                </picture>
+                            </div>
+                            <div class="text-box">
+                                <h1 class="slider-title white">YAZ-YAY<BR> 2020<br>
+                                    <span class="font-light"> </span>
+                                </h1>
+
+                                <button class="home-btn">Ətraflı</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/collection/woman/all/">
+                        <div class="main-slider-item">
+                            <div class="slider-item-image">
+                                <picture>
+                                    <img src="{%static '/media/slides/AA002.png'%}" alt="Flowers" style="width:auto;">
+                                </picture>
+                            </div>
+                            <div class="text-box">
+                                <h1 class="slider-title white">YAZ-YAY<BR> 2020<br>
+                                    <span class="font-light"> </span>
+                                </h1>
+                                <button class="home-btn">Ətraflı</button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="collection/">
+                        <div class="main-slider-item">
+                            <div class="slider-item-image">
+                                <picture>
+                                    <img src="{%static '/media/slides/Shoes_Slider_web.png'%}" alt="Flowers" style="width:auto;">
+
+                                </picture>
+                            </div>
+                            <div class="text-box">
+                                <h1 class="slider-title ">YAZ-YAY<BR> 2020<br>
+                                    <span class="font-light"> </span>
+                                </h1>
+
+                                <button class="home-btn">Ətraflı</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slader-remote">
+                    <div class="white-circle-left">
+                        <img src="{%static 'images/icons/left-arrow.png'%}" alt="circle-left" />
+                    </div>
+                    <div class="white-circle-right">
+                        <img src="{%static 'images/icons/right-arrow.png'%}" alt="circle-right" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Home section end -->
+        <!-- New Collection start -->
+        <div class="new-collection-container">
+            <div class="div-1110">
+                <div class="new-collection-content-top">
+                    <h2>KOLLEKSIYA 2020</h2>
+                    <div class="flex-container">
+                        <a class="new-collection-box" href="/collection/woman/all/">
+                            <img src="{% static '/media/categories/Qadin-kollek.png' %}" alt="Qadın" />
+                            <h5>QADIN</h5>
+                        </a>
+                        <a class="new-collection-box" href="/collection/man/all/">
+                            <img src="{% static '/media/categories/Kisi-kollek.png'%}" alt="KİŞİ" />
+                            <h5>KİŞİ</h5>
+                        </a>
+                        <a class="new-collection-box" href="/collection/kids/all/">
+                            <img src="{% static '/media/categories/Usaq-kollek.png' %}" alt="Uşaq" />
+                            <h5>UŞAQ</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="new-collection-content-bottom">
+                <div class="div-1110">
+                    <div class="flex-container-second">
+
+                        <div class="bottom-content-box" style="background-image: url({%static '/media/images/main/bags.png'%});">
+                            <div class="new-collection-item-opacity"></div>
+                            <div class="content">
+                                <h2>QADIN ÇANTALARI</h2>
+                                <a href="/collection/woman/canta1_38/">İNDİ AL</a>
+                            </div>
+                        </div>
+
+                        <div class="bottom-content-box"
+                            style="background-image: url({%static '/media/images/main/man-acc.png'%});">
+                            <div class="new-collection-item-opacity"></div>
+                            <div class="content">
+                                <h2>KİŞİ AKSESUARLARI</h2>
+                                <a href="/collection/man/accessories_5/">İNDİ AL</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- New Collection end -->
+        <!-- New added products start -->
+        <div class="additional-container">
+            <div class="div-1110">
+                <h2>Yeni əlavə olunan məhsullar</h2>
+                <div class="bottom-slider">
+                    <div>
+                        <div class="slider-part-left">
+                            <img src="{%static 'images/icons/left-arrow.png'%}" alt="slider-part-left" />
+                        </div>
+                        <div class="slider-part-right">
+                            <img src="{%static 'images/icons/right-arrow.png'%}" alt="slider-part-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-container-third">
+                    <a href="/catalogue/woman/fever-qadin-tk_10597/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Fever Qadın Ətək" />
+
+                            <meta itemprop="category" content="Qadın" />
+
+                            <meta itemprop="category" content="Geyim" />
+
+                            <meta itemprop="category" content="Ətək" />
+
+                            <meta itemprop="url" content="/catalogue/woman/fever-qadin-tk_10597/">
+
+
+                            <img itemprop="image" src="{%static 'media/84c397bc7e3100cda38c23450d26afe2.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Fever Qadın Ətək</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="66.50" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/woman/fever-qadin-tk_10597/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84727" />
+                            <p itemprop="sku" class="code">Kod: 84727</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 95,00</span>
+                                <span class="pink">₼ 66,50</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/woman/alkis-qadin-bluz_9077/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Alkış Böyük Bədən Qadın Bluz" />
+
+                            <meta itemprop="category" content="Qadın" />
+
+                            <meta itemprop="category" content="Geyim" />
+
+                            <meta itemprop="category" content="Bluz" />
+
+                            <meta itemprop="category" content="Böyük ölçülü geyimlər" />
+
+                            <meta itemprop="url" content="/catalogue/woman/alkis-qadin-bluz_9077/">
+
+
+                            <img itemprop="image" src="{%static 'media/5ff8f2247b0579ea73bcb34a7ab20a5f.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Alkış Böyük Bədən Qadın Bluz</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="66.50" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/woman/alkis-qadin-bluz_9077/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84744" />
+                            <p itemprop="sku" class="code">Kod: 84744</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 95,00</span>
+                                <span class="pink">₼ 66,50</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/man/de-blasio-kisi-koynk_10049/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="De Blasio Kişi Köynək" />
+
+                            <meta itemprop="category" content="KİŞİ" />
+
+                            <meta itemprop="category" content="Geyim" />
+
+                            <meta itemprop="category" content="Köynək" />
+
+                            <meta itemprop="url" content="/catalogue/man/de-blasio-kisi-koynk_10049/">
+
+
+                            <img itemprop="image" src="{%static 'media/8e0e57554cdcfa0d7f9ee8e2fb7b99ce.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">De Blasio Kişi Köynək</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="90.30" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/man/de-blasio-kisi-koynk_10049/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84120" />
+                            <p itemprop="sku" class="code">Kod: 84120</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 129,00</span>
+                                <span class="pink">₼ 90,30</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/man/alberti-bonacelli-kisi-salvar_9010/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Alberti Bonacelli Kişi Şalvar" />
+
+                            <meta itemprop="category" content="KİŞİ" />
+
+                            <meta itemprop="category" content="Geyim" />
+
+                            <meta itemprop="category" content="Klassik" />
+
+                            <meta itemprop="url" content="/catalogue/man/alberti-bonacelli-kisi-salvar_9010/">
+
+
+                            <img itemprop="image" src="{%static 'media/6c3ab058b54ef54734c32506499cce4a.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Alberti Bonacelli Kişi Şalvar</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="83.30" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/man/alberti-bonacelli-kisi-salvar_9010/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="83971" />
+                            <p itemprop="sku" class="code">Kod: 83971</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 119,00</span>
+                                <span class="pink">₼ 83,30</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/kids/silversun-usaq-kombinezon_18216/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Silversun Uşaq Kombinezon" />
+
+                            <meta itemprop="category" content="Uşaq" />
+
+                            <meta itemprop="category" content="Qız/Geyim" />
+
+                            <meta itemprop="category" content="Ətək" />
+
+                            <meta itemprop="url" content="/catalogue/kids/silversun-usaq-kombinezon_18216/">
+
+
+                            <img itemprop="image" src="{%static 'media/5480b6f85a436d09c1857f7556d1a6b1.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Silversun Uşaq Kombinezon</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="37.03" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/kids/silversun-usaq-kombinezon_18216/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84478" />
+                            <p itemprop="sku" class="code">Kod: 84478</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 52,90</span>
+                                <span class="pink">₼ 37,03</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/kids/silversun-usaq-tk_17719/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Silversun Uşaq Ətək" />
+
+                            <meta itemprop="category" content="Uşaq" />
+
+                            <meta itemprop="category" content="Qız/Geyim" />
+
+                            <meta itemprop="category" content="Ətək" />
+
+                            <meta itemprop="url" content="/catalogue/kids/silversun-usaq-tk_17719/">
+                            <img itemprop="image" src="{%static 'media/5de5d1cccaa3001d1a9d44ffa25197f1.jpg'%}" />
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Silversun Uşaq Ətək</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="16.73" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/kids/silversun-usaq-tk_17719/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84510" />
+                            <p itemprop="sku" class="code">Kod: 84510</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 23,90</span>
+                                <span class="pink">₼ 16,73</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/kids/silversun-usaq-salvar_16400/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Silversun Uşaq Şalvar" />
+
+                            <meta itemprop="category" content="Uşaq" />
+
+                            <meta itemprop="category" content="Oğlan/Geyim" />
+
+                            <meta itemprop="category" content="Şalvar" />
+
+                            <meta itemprop="url" content="/catalogue/kids/silversun-usaq-salvar_16400/">
+                            <img itemprop="image" src="{%static 'media/2b68e95bfe32853f0e4e636a24ae7379.jpg'%}" />
+
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Silversun Uşaq Şalvar</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="28.63" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/kids/silversun-usaq-salvar_16400/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84574" />
+                            <p itemprop="sku" class="code">Kod: 84574</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 40,90</span>
+                                <span class="pink">₼ 28,63</span>
+                            </p>
+
+                        </div>
+                    </a>
+                    <a href="/catalogue/kids/silversun-usaq-t-shirt_16015/" class="product-item">
+                        <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
+                            <meta itemprop="description" content="Silversun Uşaq T-shirt" />
+
+                            <meta itemprop="category" content="Uşaq" />
+
+                            <meta itemprop="category" content="Oğlan/Geyim" />
+
+                            <meta itemprop="category" content="Polo və T-shirt" />
+
+                            <meta itemprop="url" content="/catalogue/kids/silversun-usaq-t-shirt_16015/">
+                            <img itemprop="image" src="{%static 'media/747ac4138ae6bf1755f02b16c1570048.jpg'%}" />
+
+                        </div>
+                        <div>
+                            <h5 itemprop="name" class="name">Silversun Uşaq T-shirt</h5>
+                            <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+
+                                <meta content="11.13" itemprop="price">
+
+                                <meta content="AZN" itemprop="priceCurrency">
+                                <meta itemprop="availability" content="https://schema.org/InStock" />
+                                <meta itemprop="url" content="/catalogue/kids/silversun-usaq-t-shirt_16015/" />
+                                <meta itemprop="priceValidUntil" content="2030-06-10T23:11:57+00:00" />
+                            </div>
+                            <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
+                                <meta itemprop="reviewCount" content="100" />
+                                <meta itemprop="ratingValue" content="4.4" />
+                            </div>
+                            <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+                                <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                                </div>
+                            </div>
+                            <div itemprop="brand" itemtype="http://schema.org/Thing" itemscope>
+                                <meta itemprop="name" content="Cinici" />
+                            </div>
+                            <meta itemprop="mpn" content="84289" />
+                            <p itemprop="sku" class="code">Kod: 84289</p>
+
+                            <p class="price">
+                                <span class="line-through">₼ 15,90</span>
+                                <span class="pink">₼ 11,13</span>
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- New added products end -->
+
+ {%endblock%}
