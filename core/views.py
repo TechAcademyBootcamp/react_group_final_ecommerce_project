@@ -14,4 +14,4 @@ def checkout(request):
     return render(request ,'checkout.html')
 
 def sign_up(request):
-    return render(request ,'sign-up.html')
+    return render(request ,'sign_up.html')

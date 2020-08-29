@@ -3,10 +3,7 @@
     margin: 0px;
     padding: 0px;
 }
-@media (max-width: 991.98px)
-#proceed-to-payment {
-    padding-bottom: 120px;
-}
+
 #proceed-to-payment {
     padding: 35px 0 200px;
     background-color: #f9f9f9;
@@ -35,23 +32,7 @@ body {
     color: #333;
     background-color: #fcfcfc;
 }
-@media screen and (max-width: 940px)
-html {
-    font-size: 6px;
-    
-}
-@media screen and (max-width: 1040px)
-html {
-    font-size: 7px;
-}
-@media screen and (max-width: 1180px)
-html {
-    font-size: 8px;
-}
-@media screen and (max-width: 1280px)
-html {
-    font-size: 9px;
-}
+
 html {
     font-size: 10px;
 }
@@ -79,11 +60,7 @@ html {
     clear: both;
 }
 
-@media (max-width: 991.98px)
-#proceed-to-payment .wrapper {
-    flex-direction: column;
-    padding : 0 5px;
-}
+
 #proceed-to-payment .wrapper {
     display: flex;
     justify-content: space-between;
@@ -145,12 +122,7 @@ input {
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
     border-image: initial;
 }
-@media (max-width: 991.98px)
-#proceed-to-payment .wrapper .col-left {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
+
 #proceed-to-payment .wrapper .col-left {
     width: calc(60% - 30px);
 }
@@ -305,7 +277,7 @@ option {
     display: none;
 }
 .styledSelect {
-    background-image: url(../img/down.png);
+    background-image: url(down.png);
     background-position: 95% center;
     background-repeat: no-repeat;
     font-family: "Montserrat-light" !important;
@@ -402,20 +374,12 @@ textarea {
     border-image: initial;
     padding: 2px;
 }
-@media (max-width: 991.98px)
-#proceed-to-payment .wrapper .col-right {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
+
 #proceed-to-payment .wrapper .col-right {
     width: calc(40% - 30px);
 }
 
-@media (max-width: 991.98px)
-#proceed-to-payment .wrapper .col-right .submit-order {
-    margin-bottom: 40px;
-}
+
 #proceed-to-payment .wrapper .col-right .submit-order {
     padding: 40px;
     background-color: #fff;

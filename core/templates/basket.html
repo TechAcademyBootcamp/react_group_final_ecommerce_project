@@ -3,10 +3,8 @@
 {% load static %}
 
 {% block content %}
-
-
-<div class="container-base">
-        <div class="add-white-space">
+    
+<div class="add-white-space"></div>
             <section id="basket-section">
                   <p style="display:none" id="line_delete_confirm_message"> Sebetden bu mehsulu silmekde eminsinizmi</p>
                 <div class="container">
@@ -28,7 +26,7 @@
                                 <div class="card-left">
                                     
                                     
-                                        <a href="/catalogue/-/038_10819/"><img class="thumbnail" src="8c9b802122a6ed4284c1fc028a980bb3.jpg" alt="image"/></a>
+                                        <a href="/catalogue/-/038_10819/"><img class="thumbnail" src="{%static 'images/8c9b802122a6ed4284c1fc028a980bb3.jpg'%}" alt="image"/></a>
                                     
                                     
                                 </div>
@@ -116,6 +114,6 @@
                     </form>
                 </div>
             </section>
-        </div>
-    </div>
+            
+  
  {%endblock%}
