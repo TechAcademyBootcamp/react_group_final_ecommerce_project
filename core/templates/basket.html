@@ -1,0 +1,121 @@
+{% extends  'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container-base">
+        <div class="add-white-space">
+            <section id="basket-section">
+                  <p style="display:none" id="line_delete_confirm_message"> Sebetden bu mehsulu silmekde eminsinizmi</p>
+                <div class="container">
+                    
+                    <div class="mini-title">
+                        <p>Səbətinizdəki məhsullar (1)</p>
+                    </div>
+                    <form action="." method="post" class="basket_summary" id="basket_formset">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XYNPnFzEqU7He6XNp0mYHPjh0rr5VGuMBxtjhShrb5dAZpO3O44n7JD2uQ8GDCLs' />
+                    <input type="hidden" name="form-TOTAL_FORMS" value="1" id="id_form-TOTAL_FORMS" /><input type="hidden" name="form-INITIAL_FORMS" value="1" id="id_form-INITIAL_FORMS" /><input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS" /><input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS" />
+                    <div class="main-basket">
+
+
+                        
+                        <div class="left-sect">
+                            
+                            
+                            <div class="basket-card">
+                                <div class="card-left">
+                                    
+                                    
+                                        <a href="/catalogue/-/038_10819/"><img class="thumbnail" src="8c9b802122a6ed4284c1fc028a980bb3.jpg" alt="image"/></a>
+                                    
+                                    
+                                </div>
+                                <div class="card-right">
+                                    <div class="content">
+                                        <input type="hidden" name="form-0-id" value="2020" id="id_form-0-id" />
+                                        <a href="/catalogue/-/038_10819/"><p class="drk">Fever Qadın Ətək </p></a>
+                                            
+                                                
+                                                <p class="content-p-item">Kod: 84727</p>
+                                                
+                                            
+                                        <div class="about">
+                                            
+                                                <p class="content-p-item">Rəng: Yasil</p>
+                                                <p class="content-p-item">Ölçü: 038</p>
+                                            
+                                        </div>
+                                        <div class="count">
+                                            <span>Ədəd:</span>
+                                            <div class="inputGroupCount">
+                                                <input type="number" class="number-select" value="1" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-top">
+                                            
+                                                <span class="discount"><s>95,00 ₼</s></span>
+                                                <span>66,50 ₼</span>
+                                            
+                                        </div>
+                                        <div class="price-bottom">
+                                            <a href="" style="display: none;">Düzəliş et</a>
+                                            <a href="/basket/line/2020/remove/" class="delete-basket-button"
+                                                                data-delete="id_form-0-DELETE"
+                                                                data-id="0"
+                                                                data-behaviours="remove">Sil</a>
+                                            <div style="display:none">
+                                                <input type="checkbox" name="form-0-save_for_later" id="id_form-0-save_for_later" />
+                                                <input type="checkbox" name="form-0-DELETE" id="id_form-0-DELETE" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="right-sect">
+                            
+
+
+
+
+                            <div class="right-top">
+                                <div class="line">
+                                    <p>Məhsullar (1)</p>
+                                    <span>95,00 ₼</span>
+                                </div>
+                                <div class="line line-item">
+                                    <p class="basket-discount">Endirim</p>
+                                        <span class="align-right">-28,50 ₼</span>
+                                </div>
+                                <div class="line line-item">
+                                    <p>Çatdırılma</p>
+                                    <span>
+                                        
+                                            0,00 ₼
+                                        
+                                    </span>
+                                </div>
+                                <p>50 ₼-dən yuxarı alış-verişlərdə çatdırılma pulsuz!</p>
+                            </div>
+                            <div class="right-bottom">
+                                <div class="line">
+                                    <p>CƏMİ</p>
+                                    <span>66,50 ₼ </span>
+                                </div>
+                                <button type="button" class="button-green submit-payment">Sifarişə davam et</button>
+                            </div>
+                        </div>
+                    </div>                   
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+ {%endblock%}

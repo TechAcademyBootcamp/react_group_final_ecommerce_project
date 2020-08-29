@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74232a83ecedd25272e1ae5ddd0bcaea8a7ec418
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -75,16 +79,26 @@ WSGI_APPLICATION = 'ecommerce_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecommerce_project',
-        'USER': 'root',
-        'PASSWORD': '12345',
-        'HOST': '127.0.0.1',
-        'PORT':3308
+print(os.environ.get('usesqlite'))
+
+if os.environ.get('usesqlite'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'ecommerce_project',
+            'USER': 'root',
+            'PASSWORD': '12345',
+            'HOST': '127.0.0.1',
+            'PORT':3308
+        }
+    }
 
 
 # Password validation

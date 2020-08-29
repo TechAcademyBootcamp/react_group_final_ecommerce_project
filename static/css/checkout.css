@@ -1,0 +1,597 @@
+.container-base {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+@media (max-width: 991.98px)
+#proceed-to-payment {
+    padding-bottom: 120px;
+}
+#proceed-to-payment {
+    padding: 35px 0 200px;
+    background-color: #f9f9f9;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+section {
+    display: block;
+}
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat-Regular';
+    background: white;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #fcfcfc;
+}
+@media screen and (max-width: 940px)
+html {
+    font-size: 6px;
+    
+}
+@media screen and (max-width: 1040px)
+html {
+    font-size: 7px;
+}
+@media screen and (max-width: 1180px)
+html {
+    font-size: 8px;
+}
+@media screen and (max-width: 1280px)
+html {
+    font-size: 9px;
+}
+html {
+    font-size: 10px;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+
+.container:after {
+    clear: both;
+}
+
+@media (max-width: 991.98px)
+#proceed-to-payment .wrapper {
+    flex-direction: column;
+    padding : 0 5px;
+}
+#proceed-to-payment .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+input, textarea {
+    outline: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+input {
+    line-height: normal;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+input[type="hidden" i] {
+    display: none;
+    appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+@media (max-width: 991.98px)
+#proceed-to-payment .wrapper .col-left {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+#proceed-to-payment .wrapper .col-left {
+    width: calc(60% - 30px);
+}
+div {
+    display: block;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box {
+    background-color: #fff;
+    padding: 40px;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .title {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #c9c9c9;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #272727;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    line-height: normal;
+}
+h4, .h4 {
+    font-size: 18px;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .form-wrapper .input-wrapper {
+    width: calc(50% - 20px);
+    position: relative;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper label {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #272727;
+    margin-bottom: 6px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+label {
+    cursor: default;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .form-wrapper .input-wrapper input {
+    margin-top: auto;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper input, #proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper textarea {
+    border: solid 1px #dcdcdc;
+    background-color: #ffffff;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #272727;
+}
+
+input[type="text" i] {
+    padding: 1px 2px;
+}
+
+.select-item select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(down.png);
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border: solid 1px #dcdcdc;
+    background-color: #ffffff;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #272727;
+}
+
+button, select {
+    text-transform: none;
+}
+
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+select {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    cursor: default;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-radius: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.hide-select .select-item ul, .hide-select .select-item .styledSelect {
+    display: none;
+}
+.styledSelect {
+    background-image: url(../img/down.png);
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    font-family: "Montserrat-light" !important;
+}
+.hide-select .select-item ul, .hide-select .select-item .styledSelect {
+    display: none;
+}
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper textarea {
+    resize: none;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper input, #proceed-to-payment .wrapper .col-left .personal-info-box .input-wrapper textarea {
+    border: solid 1px #dcdcdc;
+    background-color: #ffffff;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #272727;
+}
+input, textarea {
+    outline: 0;
+    background: none;
+    background-image: none;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textarea;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+    padding: 2px;
+}
+@media (max-width: 991.98px)
+#proceed-to-payment .wrapper .col-right {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#proceed-to-payment .wrapper .col-right {
+    width: calc(40% - 30px);
+}
+
+@media (max-width: 991.98px)
+#proceed-to-payment .wrapper .col-right .submit-order {
+    margin-bottom: 40px;
+}
+#proceed-to-payment .wrapper .col-right .submit-order {
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .prod-info {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #c9c9c9;
+    margin-bottom: 20px;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .prod-info li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .prod-info li p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 0.88;
+    text-align: center;
+    color: #272727;
+}
+p {
+    margin: 0 0 10px;
+}
+p {
+    display: block;
+   
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+ul {
+    list-style-type: disc;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .prod-info span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    color: #8d8d8d;
+    display: block;
+    margin-top: 5px;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#proceed-to-payment .wrapper .col-right .submit-order .title h4, #proceed-to-payment .wrapper .col-right .submit-order .title span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0.88;
+    color: #272727;
+    margin-bottom: 30px;
+}
+
+#proceed-to-payment .wrapper .col-right .submit-order .title span {
+    color: #e4013a;
+}
+
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    opacity: 0 !important;
+    width: unset;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 27px;
+    cursor: pointer;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+    color: #272727;
+    margin-bottom: 0;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper input[type="checkbox"]+label:before {
+    content: "";
+    height: 17px;
+    width: 17px;
+    border-radius: 0;
+    border: solid 1px #aaaaaa;
+    background-color: #ffffff;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper label a {
+    color: #1a9cff;
+    text-decoration: underline;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .checkbox-wrapper input[type="checkbox"]+label:after {
+    content: "\f00c";
+    position: absolute;
+    font-family: "FontAwesome";
+    top: 3px;
+    width: 10px;
+    height: 0px;
+    left: 3px;
+    font-size: 12px;
+    opacity: 0;
+    color: #aaaaaa;
+}
+#proceed-to-payment .wrapper .col-right .submit-order .button-green {
+    color: #ffffff;
+    margin-top: 30px;
+}
+.button-green {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.28px;
+    text-align: center;
+    color: #ffffff;
+    padding: 16px 40px;
+    width: 100%;
+    background-color: #35cc62;
+    border: 1px solid #35cc62;
+    transition: 0.3s;
+}
+a, button {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.2s;
+}
+#proceed-to-payment .wrapper .col-right .order-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px 0 30px;
+}
+#proceed-to-payment .wrapper .col-right .order-info .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+#proceed-to-payment .wrapper .col-right .order-info .icon img {
+    width: 100%;
+    height: 100%;
+}  
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+} 
+#proceed-to-payment .wrapper .col-right .order-info span {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #8d8d8d;
+    width: calc(100% - 30px);
+    max-width: max-content;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .form-wrapper .input-wrapper .inputHolder span {
+    position: absolute;
+    bottom: 14.5px;
+    left: 20px;
+    line-height: 1.71;
+}
+#proceed-to-payment .wrapper .col-left .personal-info-box .form-wrapper .input-wrapper .inputHolder input {
+    width: 100%;
+    padding-left: 60px;
+}

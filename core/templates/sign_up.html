@@ -1,0 +1,73 @@
+{% extends  'base.html' %}
+
+{% load static %}
+
+{% block content %} 
+ 
+ <div class="registration-container">
+        <div class="registration-content">
+            <div class="registration-box">
+                <form id="register_form" action="." method="post" class="form-stacked">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='DTbMq1NXRAhNDurFwAN2naMnjJLhnE8vhsRgkevKCLnGoNiVVEvrN468N8sS5Apb' />
+                    <p class="title">QEYDİYYAT</p>
+                    <div class="upper-side">
+                        
+                            <label class="input-container" for="id_first_name">
+                                <span class="label-text">Ad</span>
+                                <input type="text" name="first_name" placeholder="Ad daxil edin" maxlength="255" required id="id_first_name" />
+                            </label>
+                        
+                            <label class="input-container" for="id_last_name">
+                                <span class="label-text">Soyad</span>
+                                <input type="text" name="last_name" placeholder="Soyad daxil edin" maxlength="255" required id="id_last_name" />
+                            </label>
+                        
+                            <label class="input-container" for="id_email">
+                                <span class="label-text">E-poçt</span>
+                                <input type="email" name="email" placeholder="hello@gmail.com" required id="id_email" />
+                            </label>
+                        
+                            <label class="input-container" for="id_phone">
+                                <span class="label-text">Telefon</span>
+                                <input type="text" name="phone" placeholder="050 123 45 67" maxlength="255" id="id_phone" />
+                            </label>
+                        
+                            <label class="input-container" for="id_password1">
+                                <span class="label-text">Şifrə</span>
+                                <input type="password" name="password1" placeholder="****" required id="id_password1" />
+                            </label>
+                        
+                            <label class="input-container" for="id_password2">
+                                <span class="label-text">Şifrənin təkrarı</span>
+                                <input type="password" name="password2" placeholder="****" required id="id_password2" />
+                            </label>
+                        
+                        <input type="hidden" name="redirect_url" id="id_redirect_url"
+                               value="/accounts/register/success/" class="pink-text">
+                    </div>
+                    <div class="below-side">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="accept" value="" required>
+                            <span class="checkmark"></span>
+                            <p><a href="#" class="blue-text">
+                                "Alıcı razılaşması"</a>nın şərtlərini oxudum və şərtlər ilə razıyam
+                            </p>
+                        </label>
+                        <button type="submit" class="registration-btn">QEYDİYYAT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {%endblock%}
