@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="az" class="no-js">
+
+<head>
+    <title>Cinici.az</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content=" " />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/slick.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{%static 'css/slick-theme.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{%static 'css/login.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{%static 'css/responsive.css' %}" type="text/css" />
+     <link rel="stylesheet" href="{%static 'css/basket.css' %}" type="text/css" />
+      <link rel="stylesheet" href="{%static 'css/checkout.css' %}" type="text/css" />
+       <link rel="stylesheet" href="{%static 'css/sign_up.css' %}" type="text/css" />
+
+<body id="default" class="default">
+    <div class="container-base">
+
+        {% include 'includes/navbar.html' %}
+
+        {%block content%}
+        {% endblock %}
+
+        {% include 'includes/footer.html' %}
+
+    </div>
+    <div id="snackbar"></div>
+    <!-- jQuery -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/oscar/js/jquery/jquery.min.js"><\/script>')</script>
+    
+    <!-- Twitter Bootstrap -->
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <!-- Oscar -->
+    <script src="{%static 'js/ui.js'%}"></script>
+    
+    <!-- injector:js -->
+    <script src="{%static 'js/slick.js'%}"></script>
+    <script src="{%static 'js/slider.js'%}"></script>
+    <script src="{%static 'js/custom.js'%}"></script>
+    <script src="{%static 'js/main.js'%}"></script>
+    <script src="{%static 'js/price_range_script.js'%}"></script>
+    <script src="{%static 'js/popup.js'%}"></script>
+    
+</body>
+    
+    </html>
