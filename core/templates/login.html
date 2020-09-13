@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block content%}
+
+        <!-- Login Start -->
+
+        <div class="login-container">
+            <div class="login-content">
+                <div class="login-box">
+                    <div>
+                        <p>HESABA DAXİL OL</p>
+                        <form id="login_form" >
+                                <label for="id_login-username">E-poçt</label>
+                                <input type="email" >
+                                <label for="id_login-password">Parol</label>
+                                <input type="password">
+                            <input type="hidden"  id="id_redirect_url" >
+                            <button class="first-btn" type="submit">DAXİL OL</button>
+                        </form>
+                        <p class="forget-password">Şifrəni unutdun?</p>
+                        <a class="second-btn" href="/accounts/register/">QEYDİYYAT</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Login End -->
+            
+
+
+{%endblock%}
