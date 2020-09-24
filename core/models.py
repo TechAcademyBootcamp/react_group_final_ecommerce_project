@@ -18,7 +18,10 @@ class Category(models.Model):
         ordering = ('order', '-created_at',)
 
     def __str__(self):
-        return self.title
+        if self.parent_category:
+            return f"{self.id}. {self.title} Parent: {self.parent_category}"
+        else:
+            return f"{self.id}. {self.title}"
 
 
 class Product(models.Model):
@@ -123,3 +126,26 @@ class ProductProperties(models.Model):
     
     def __str__(self):
         return f"Product: {self.product}, Property: {self.property_value}"
+
+class ProductDiscount(models.Model):
+    CHOICES_DISCOUNT = (
+        ('1', _('Faiz')),
+        ('2', _('Manat')),
+    )
+    products = models.ManyToManyField(Product, verbose_name=_('Product Discounts'), related_name='product_discounts',)
+    compaign = models.CharField(_('Compaign'), max_length=120)
+    discount_type = models.BooleanField(_('Discount Type'),choices=CHOICES_DISCOUNT)
+    discount_amount = models.DecimalField(_('Discount Amount'),max_digits=7, decimal_places=2)
+    deadline = models.DateTimeField(_('Deadline'),)
+    is_active = models.BooleanField(_('Is Active'), default=True)
+
+    # moderators
+    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = _('Product Discount')
+        verbose_name_plural = _('Product Discounties')
+    
+    def __str__(self):
+        return f"Compaign: {self.compaign}, Discount Amount: {self.discount_amount}"

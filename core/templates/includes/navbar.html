@@ -1,4 +1,4 @@
- {%load static%}      
+ {% load static custom_tags %}      
        <!-- Header section start -->
         <div class="header-container">
             <div class="div-1110">
@@ -14,11 +14,14 @@
                             <div class="mobile-menu-content">
                                 <div class="mobile-main-menu-section">
                                     <ul class="mobile-main-menus with-submenu show">
+                                        {% get_categories as categories %}
+                                    
+                                        {% for category in categories %}
                                         <li class="main-menu-item">
                                             <div class="menu-text">
                                                 <img class="back-menu" src="{%static 'images/icons/mobile-back-icon.svg'%}"
                                                     alt="back-menu" />
-                                                <a href="/collection/woman/all/">Qadın</a>
+                                                <a href="/collection/woman/all/">{{category.title}}</a>
                                                 <img class="next-menu" src="{%static 'images/icons/Path%20239.svg'%}"
                                                     alt="next-menu" />
                                             </div>
@@ -242,6 +245,7 @@
                                                 </li>
                                             </ul>
                                         </li>
+                                        {% endfor %}
                                         <li class="main-menu-item">
                                             <div class="menu-text">
                                                 <img class="back-menu" src="{%static 'images/icons/mobile-back-icon.svg'%}"
@@ -1922,413 +1926,348 @@
                         <img class="header-logo" src="{%static 'images/main/Logo.svg'%}" alt="header-logo" style="cursor: pointer"
                             onclick="location.href = '/'" />
                         <ul class="header-ul">
+                            {% get_categories as categories %}
+                                    
+                            {% for category in categories %}
                             <li class="menu-item" data-category="Qadın" data-url="/getcategory/" data-loading="false">
                                 <a class="main-menu" href="/collection/woman/all/">
-                                    QADIN
+                                    {{category.title}}
                                     <span></span>
                                 </a>
-                                <div class="submenu-container">
-
-
-                                    <div class="submenu-content">
-                                        <div class="submenu-list-container">
-
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/woman/clothes1_8/">Geyim</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=godkc1">Gödəkçə</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=palto-v-plas1">Palto
-                                                        və Plaş</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=kostyum-v-penck1">Kostyum
-                                                        və Pencək</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=don1">Don</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=tk1">Ətək</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=koynk1">Köynək</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=bluz1">Bluz</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=sviter-v-jaket1">Sviter
-                                                        və Jaket</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=salvar1">Şalvar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=jeans-salvar">Jeans
-                                                        Şalvar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=dri1">Dəri</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/clothes1_8/?clothes1=alt-paltari1,ev-geyimi1">Alt
-                                                        Paltarı və Ev Geyimi</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/clothes1_8/?clothes1=boyuk-olculu-geyimlr">Böyük
-                                                        ölçülü geyimlər</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/clothes1_8/?clothes1=digr1">Digər</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/woman/shoes1_7/">Ayaqqabı</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/shoes1_7/?shoes1=klassik1">Klassik</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/shoes1_7/?shoes1=casual1">Casual</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/shoes1_7/?shoes1=sport1">Sport</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/woman/canta1_38/">Çanta</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/canta1_38/?canta1=bel-cantasi">Bel
-                                                        çantası</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/canta1_38/?canta1=klassik-canta">Klassik
-                                                        çanta</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/woman/canta1_38/?canta1=kicik-l-cantasiclutch">Kiçik
-                                                        əl çantası/Clutch</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/woman/aksessuarlar1_13/">Aksesuarlar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/aksessuarlar1_13/?aksessuarlar1=corab1">Corab</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/aksessuarlar1_13/?aksessuarlar1=pulqabi1">Pulqabı</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/aksessuarlar1_13/?aksessuarlar1=srf-v-yayliq">Şərf
-                                                        və yaylıq</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/aksessuarlar1_13/?aksessuarlar1=kmr1">Kəmər</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/woman/aksessuarlar1_13/?aksessuarlar1=digr2">Digər</a>
-                                                </li>
-
-
-
-                                            </ul>
+                                {% check_container_is_big category as container_is_big %}
+
+                                {% if container_is_big %}
+                                    <div class="submenu-container">
+
+                                        {% if category.id is 3 %}
+                                        <div class="submenu-content children">
+                                            <div class="children-age-filter">
+                                                <ul>
+                                                    {% for category in category.sub_categories.all %}
+                                                    <li class="age-filter-item active">
+                                                        <a href="/collection/kids/all/?age=0-24ay">0-24 Ay</a>
+                                                        {% if check_container_is_big %}
+                                                        <div class="age-filter-container">
+                                                            <div class="age-filter-content">
+    
+                                                                <div class="filter-content-right-side">
+    
+                                                                    <div class="inside-filters">
+                                                                        <!-- {% for category in category.sub_categories.all.slice} -->
+                                                                        <div class="left">
+                                                                            <ul class="submenu-lists">
+                                                                                <li class="filter-title">
+                                                                                    <a class="filter-side-title"
+                                                                                        href="/collection/kids/clothes3_12/?age=0-24ay">Qız/Geyim</a>
+                                                                                </li>
+    
+                                                                                <li>
+                                                                                    <a href="/collection/kids/clothes3_12/?clothes3=ev-v-idman-dsti1&age=0-24ay">Ev
+                                                                                        və İdman dəsti</a>
+                                                                                </li>
+    
+    
+                                                                            </ul>
+                                                                        </div>
+    
+                                                                        <div class="right">
+                                                                            <ul class="submenu-lists with-margin">
+                                                                                <li class="filter-title">
+                                                                                    <a class="filter-side-title"></a>
+                                                                                </li>
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=don2&age=0-24ay">Don</a>
+                                                                                </li>
+    
+    
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=tk2&age=0-24ay">Ətək</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=sviter-v-jaket3&age=0-24ay">Sviter
+                                                                                        və Jaket</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=alt-paltari3&age=0-24ay">Alt
+                                                                                        Paltarı</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=godkc3&age=0-24ay">Gödəkçə</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/clothes3_12/?clothes3=digr6&age=0-24ay">Digər</a>
+                                                                                </li>
+    
+    
+                                                                            </ul>
+                                                                        </div>
+    
+                                                                    </div>
+                                                                </div>
+    
+    
+    
+                                                                <div class="filter-content-right-side">
+    
+                                                                    <div class="inside-filters">
+                                                                        <div class="left">
+                                                                            <ul class="submenu-lists">
+                                                                                <li class="filter-title">
+                                                                                    <a class="filter-side-title"
+                                                                                        href="/collection/kids/oglangeyim_113/?age=0-24ay">Oğlan/Geyim</a>
+                                                                                </li>
+    
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=ev-v-idman-dsti2&age=0-24ay">Ev
+                                                                                        və İdman dəsti</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=body2&age=0-24ay">Body</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=koynk4&age=0-24ay">Köynək</a>
+                                                                                </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=salvar4&age=0-24ay">Şalvar</a>
+                                                                                </li>
+    
+    
+    
+    
+                                                                            </ul>
+                                                                        </div>
+    
+                                                                        <div class="right">
+                                                                            <ul class="submenu-lists with-margin">
+                                                                                <li class="filter-title">
+                                                                                    <a class="filter-side-title"></a>
+                                                                                </li>
+    
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=godkc4&age=0-24ay">Gödəkçə</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=sviter-v-jaket4&age=0-24ay">Sviter
+                                                                                        və Jaket</a>
+                                                                                </li>
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=alt-paltari4&age=0-24ay">Alt
+                                                                                        Paltarı</a>
+                                                                                </li>
+    
+    
+    
+    
+    
+                                                                                <li>
+                                                                                    <a
+                                                                                        href="/collection/kids/oglangeyim_113/?oglangeyim=digr7&age=0-24ay">Digər</a>
+                                                                                </li>
+    
+    
+                                                                            </ul>
+                                                                        </div>
+    
+                                                                    </div>
+                                                                </div>
+    
+    
+    
+                                                            </div>
+                                                        </div>
+                                                        {% else %}
+                                                        <div class="age-filter-container filter_aksessuarlar">
+                                                            <div class="age-filter-content">
+                                                                <ul class="submenu-lists minimize">
+    
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=canta2">Çanta</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=papaq">Papaq</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=kalqotqa-v-corab">Kolqotqa
+                                                                            və Corab</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=lck">Əlcək</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=digr5">Digər</a>
+                                                                    </li>
+    
+    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        {% endfor %}
+                                                    </li>
+                                                    {% endfor %}
+                                                
+    
+                                                    <li class="age-filter-item">
+                                                        <a href="#">Aksesuarlar</a>
+                                                        <div class="age-filter-container filter_aksessuarlar">
+                                                            <div class="age-filter-content">
+                                                                <ul class="submenu-lists minimize">
+    
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=canta2">Çanta</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=papaq">Papaq</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=kalqotqa-v-corab">Kolqotqa
+                                                                            və Corab</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=lck">Əlcək</a>
+                                                                    </li>
+    
+                                                                    <li>
+                                                                        <a
+                                                                            href="/collection/kids/all/?aksessuarlar2=digr5">Digər</a>
+                                                                    </li>
+    
+    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+    
+                                                </ul>
+                                            </div>
+                                            <div class="">
+    
+                                            </div>
+                                        </div>
+                                        {% else %}
+                                        <div class="submenu-content">
+                                            <div class="submenu-list-container">
+                                                <!-- sub categories example: geyim, Ayaqqabi, canta ... -->
+                                                {% for category in category.sub_categories.all %}
+                                                <ul class="submenu-lists">
+                                                    
+                    
+                                                    <li class="title">
+                                                        <a href="/collection/woman/clothes1_8/">{{category.title}}</a>
+                                                    </li>
+                                                        <!-- sub sub categories example: geyim > godekce, Palto və Plaş, Kostyum və Pencək -->
+                                                        {% for category in category.sub_categories.all %}
+                                                            <li>
+                                                                <a href="/collection/woman/clothes1_8/?clothes1=godkc1">{{category.title}}</a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    
+                                                </ul>
+                                                {% endfor %}
+                            
+
+
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                {% else %}
+                                    {% if category.sub_categories.all %}
+                                        <div class="submenu-container">
+
+                                            <div class="submenu-content auto-width cards filter_accesuar">
+                                                
+                                                <ul class="submenu-lists">
+                                                    {% for category in category.sub_categories.all %}
+                                                    <li>
+                                                        <a href="/collection/aksessuar/all/?aksessuar=yol-cantalari">{{category.title}}</a>
+                                                    </li>
+                                                    {% endfor %}
+                                                    
+                                                </ul>
+                                            </div>
 
 
                                         </div>
-                                    </div>
-
-
-                                </div>
+                                    {% endif %}
+                                {% endif %}
                             </li>
-                            <li class="menu-item" data-category="Kİşİ" data-url="/getcategory/" data-loading="false">
-                                <a class="main-menu" href="/collection/man/all/">
-                                    KİŞİ
-                                    <span></span>
-                                </a>
-                                <div class="submenu-container">
-
-
-                                    <div class="submenu-content">
-                                        <div class="submenu-list-container">
-
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/man/clothes2_3/">Geyim</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=godkc2">Gödəkçə</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=palto-v-plas2">Palto
-                                                        və Plaş</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/clothes2_3/?clothes2=penck1,kostyum2,bylik-dsti">Kostyum
-                                                        və Pencək</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=polo-v-t-shirt1">Polo
-                                                        və T-Shirt</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=koynk2">Köynək</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/clothes2_3/?clothes2=klassik2,casual2,jeans">Şalvar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=sviter-v-jaket2">Sviter
-                                                        və Jaket</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=dri2">Dəri</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/clothes2_3/?clothes2=alt-paltari2,ev-geyimi3">Alt
-                                                        paltarı və Ev Geyimi</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/clothes2_3/?clothes2=digr3">Digər</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/man/shoes2_4/">Ayaqqabı</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/shoes2_4/?shoes2=klassik3">Klassik</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/shoes2_4/?shoes2=casual3">Casual</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/shoes2_4/?shoes2=sport2">Sport</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-                                            <ul class="submenu-lists">
-                                                <li class="title">
-                                                    <a href="/collection/man/accessories_5/">Aksesuarlar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/accessories_5/?accessories=corab2">Corab</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/accessories_5/?accessories=cantalar">Çantalar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/accessories_5/?accessories=kmr2">Kəmər</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/accessories_5/?accessories=qalstuk">Qalstuk</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/accessories_5/?accessories=pulqabi2">Pulqabı</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/accessories_5/?accessories=srf">Şərf</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a
-                                                        href="/collection/man/accessories_5/?accessories=papaqlar">Papaqlar</a>
-                                                </li>
-
-
-
-                                                <li>
-                                                    <a href="/collection/man/accessories_5/?accessories=digr4">Digər</a>
-                                                </li>
-
-
-
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </li>
+                            {% endfor  %}
+                            
                             <li class="menu-item" data-category="Uşaq" data-url="/getcategory/" data-loading="false">
                                 <a class="main-menu" href="/collection/kids/all/">
                                     UŞAQ
@@ -3548,9 +3487,6 @@
                                                     </div>
                                                 </li>
 
-
-
-
                                                 <li class="age-filter-item">
                                                     <a href="#">Ayaqqabı</a>
                                                     <div class="age-filter-container filter_shoes">
@@ -3572,8 +3508,6 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
-
 
                                                 <li class="age-filter-item">
                                                     <a href="#">Aksesuarlar</a>
@@ -3614,12 +3548,6 @@
                                                     </div>
                                                 </li>
 
-
-
-
-
-
-
                                             </ul>
                                         </div>
                                         <div class="">
@@ -3630,47 +3558,7 @@
 
                                 </div>
                             </li>
-                            <li class="menu-item" data-category="Aksesuarlar" data-url="/getcategory/"
-                                data-loading="false">
-                                <a class="main-menu" href="/collection/aksessuar/all/">
-                                    AKSESUARLAR
-                                    <span></span>
-                                </a>
-                                <div class="submenu-container">
-
-
-                                    <div class="submenu-content auto-width cards filter_accesuar">
-                                        <ul class="submenu-lists">
-
-                                            <li>
-                                                <a href="/collection/aksessuar/all/?aksessuar=yol-cantalari">Yol
-                                                    çantaları</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="/collection/aksessuar/all/?aksessuar=bel-cantalari">Bel
-                                                    çantaları</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="/collection/aksessuar/all/?aksessuar=ayaqqabiya-qulluq">Ayaqqabıya
-                                                    Qulluq</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="/collection/aksessuar/all/?aksessuar=ctir">Çətir</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="/collection/aksessuar/all/?aksessuar=digr8">Digər</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-
-                                </div>
-                            </li>
+                            
                             <li class="menu-item" data-category="Endİrİmlİ mallar">
                                 <a class="main-menu" href="/collection/?discount=true">ENDİRİMLİ MALLAR<span></span></a>
                                 <div class="submenu-container">
