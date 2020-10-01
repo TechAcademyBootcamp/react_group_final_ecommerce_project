@@ -18,3 +18,13 @@ def check_container_is_big(parent_element):
             return True
     else:
         return False
+
+@register.simple_tag
+def category_half_elements(category, first_half):
+    print(category)
+    half_count = category.sub_categories.count()//2
+    print(category.sub_categories.all())
+    if first_half:
+        return category.sub_categories.all()[:half_count]
+    return category.sub_categories.all()[half_count:]
+    
