@@ -149,3 +149,21 @@ class ProductDiscount(models.Model):
     
     def __str__(self):
         return f"Compaign: {self.compaign}, Discount Amount: {self.discount_amount}"
+
+class Bonuse(models.Model):
+    title = models.CharField(_('Title'), max_length=20)
+    image = models.FileField(upload_to='bonuse')
+    description = models.TextField(_('Description'))
+    bonuse = models.IntegerField(_('Bonuse'), default=5)
+
+    # moderators
+    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = _('Bonuse')
+        verbose_name_plural = _('Bonuses')
+        ordering = ('created_at',)
+
+    def __str__(self):
+        return self.title

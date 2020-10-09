@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="membership_card.css">
-  <link rel="stylesheet" href="owl.carousel.min.css">
-  <link rel="stylesheet" href="owl.theme.default.min.css">
+{% block css %}
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-</head>
+  <link rel="stylesheet" href="{% static 'css/membership_card.css' %}">
 
-<body>
-  <section>
-    <div class="container">
+{% endblock %}
+
+      {% block content %}
+      <div class="container">
       <div class="row">
         <div class="col-md-12 head">
           <h1>ÜZVLÜK KARTLARI</h1>
@@ -32,159 +30,49 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 10px; padding-right: 10px;">
                 <div class="owl-carousel owl-theme">
-                  <div class="item cart-active" data-show-item="#first">
+                  {% for bonuse in bonuse_list %}
+                  <div class="item {% if forloop.counter is 1 %} cart-active {% endif %}" data-show-item="#show-item-{{bonuse.id}}">
                     <div class="card_des">
                       <a href="#" class="active">
-                        <div class="cardimg1"></div>
-                        <p>CLUB</p>
+                        <div class="cardimg1" style="background-image: url('{{ bonuse.image.url}}');"></div>
+                        <p>{{bonuse.title}}</p>
                       </a>
                     </div>
                   </div>
-                  <div class="item" data-show-item="#second">
-                    <div class="card_des">
-                      <a href="#" class="active">
-                        <div class="cardimg2"></div>
-                        <p>GOLD</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="item" data-show-item="#third">
-                    <div class="card_des">
-                      <a href="#" class="active">
-                        <div class="cardimg3"></div>
-                        <p>PLATINUM</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="item" data-show-item="#fourth">
-                    <div class="card_des">
-                      <a href="#" class="active">
-                        <div class="cardimg4"></div>
-                        <p>VIP</p>
-                      </a>
-                    </div>
-                  </div>
+                  {% endfor %}
+                 
                 </div>
               </div>
             </div>
           </div>
           <section class="menuwrapper">
-            <article id="first" class="menu_item item_active">
+            {% for bonuse in object_list %}
+            <article id="show-item-{{bonuse.id}}" class="menu_item {% if forloop.counter == 1 %} item_active {% endif %}">
               <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 info">
                   <div class="col-md-4 col-sm-4">
                     <div class="card_image">
-                      <img src="./images/Basic.svg" alt="">
+                      <img src="{{bonuse.image.url}}" alt="">
                     </div>
                   </div>
                   <div class="col-md-8 col-sm-8 col-xs-12 more_info">
-                    <h3>CLUB CART</h3>
-                    <p>Kartın sizə təqdim etdiyi imtiyazlar: • Çinici mağalaralından edəcəyiniz hər alış-veriş
-                      məbləğinin 5%-ı
-                      bonus olaraq Çinici Club Card-ınıza yüklənəcək. Endirimli məhsullarda isə 2.5% olaraq
-                      hesablanacaqdır. • Topladığınız bonuslar hər alış-verişinizdən bir gün sonra hesabınızın aktivinə
-                      əlavə
-                      ediləcək və Siz istədiyiniz zaman mağazalarımızdan edəcəyiniz alış-verişlərdə bu bonuslardan
-                      istifadə
-                      edə biləcəksiniz.(Bonusların etibarlılıq müddəti 1 ildir) • Çinici Club Card üzvləri üçün xüsusi
-                      olaraq
-                      nəzərdə tutulmuş kampaniyalardan istifadə edəcək, həmçinin ümumi kampaniyalar başlamadan
-                      öncə ilk Siz məlumatlandırılacaqsınız</p>
-                    <a href="">Bonus: 5%</a>
+                    <h3>{{bonuse.title|upper}} CART</h3>
+                    <p>{{bonuse.description}}</p>
+                    <a href="">Bonus: {{bonuse.bonuse}}%</a>
                   </div>
 
                 </div>
               </div>
 
             </article>
-            <article id="second" class="menu_item">
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 info">
-                  <div class="col-md-4 col-sm-4">
-                    <div class="card_image">
-                      <img src="./images/Gold.svg" alt="">
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-sm-8 col-xs-12 more_info">
-                    <h3>GOLD CART</h3>
-                    <p>Çinici Club Gold Card-a bir il ərzində 1500 Azn və yuxarı məbləğdə alış-veriş etməklə sahib ola
-                      bilərsiniz. Kartın sizə təqdim etdiyi imtiyazlar: • Çinici mağalaralından edəcəyiniz hər
-                      alış-veriş məbləğinin 10%-ı bonus olaraq Çinici Club Gold Card-ınıza yüklənəcək. Endirimli
-                      məhsullarda isə 5% olaraq hesablanacaqdır. • Ad günü ərəfəsində, yəni ad gününüzdən öncəki və
-                      sonrakı 3 gün ərzində, edəcəyiniz alış-verişlərdə əlavə olaraq 5% bonus qazanacaqsınız. •
-                      Topladığınız bonuslar hər alış-verişinizdən bir gün sonra hesabınızın aktivinə əlavə ediləcək və
-                      Siz istədiyiniz zaman mağazalarımızdan edəcəyiniz alış-verişlərdə bu bonuslardan istifadə edə
-                      biləcəksiniz.(Bonusların etibarlılıq müddəti 1 ildir) • Çinici Club Card üzvləri üçün xüsusi
-                      olaraq nəzərdə tutulmuş kampaniyalardan istifadə edəcək, həmçinin ümumi kampaniyalar başlamadan
-                      öncə ilk Siz məlumatlandırılacaqsınız.</p>
-                    <a href="">Bonus: 5%</a>
-                  </div>
-
-                </div>
-              </div>
-
-            </article>
-            <article id="third" class="menu_item">
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 info">
-                  <div class="col-md-4 col-sm-4">
-                    <div class="card_image">
-                      <img src="./images/Platinum.svg" alt="">
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-sm-8 col-xs-12 more_info">
-                    <h3>PLATINUM CART</h3>
-                    <p>Çinici Club Platin Card-a bir il ərzində 3000 Azn və yuxarı məbləğdə alış-veriş etməklə sahib ola
-                      bilərsiniz. Kartın sizə təqdim etdiyi imtiyazlar: • Çinici mağalaralından edəcəyiniz hər
-                      alış-veriş məbləğinin 15%-ı bonus olaraq Çinici Club Platin Card-ınıza yüklənəcək. Endirimli
-                      məhsullarda isə 7.5% olaraq hesablanacaqdır. • Ad günü ərəfəsində, yəni ad gününüzdən öncəki və
-                      sonrakı 3 gün ərzində, edəcəyiniz alış-verişlərdə əlavə olaraq 7.5% bonus qazanacaqsınız. •
-                      Topladığınız bonuslar hər alış-verişinizdən bir gün sonra hesabınızın aktivinə əlavə ediləcək və
-                      Siz istədiyiniz zaman mağazalarımızdan edəcəyiniz alış-verişlərdə bu bonuslardan istifadə edə
-                      biləcəksiniz.(Bonusların etibarlılıq müddəti 1 ildir) • Çinici Club Card üzvləri üçün xüsusi
-                      olaraq nəzərdə tutulmuş kampaniyalardan istifadə edəcək, həmçinin ümumi kampaniyalar başlamadan
-                      öncə ilk Siz məlumatlandırılacaqsınız.</p>
-                    <a href="">Bonus: 5%</a>
-                  </div>
-
-                </div>
-              </div>
-
-            </article>
-            <article id="fourth" class="menu_item">
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 info">
-                  <div class="col-md-4 col-sm-4">
-                    <div class="card_image">
-                      <img src="/images/Vip.svg" alt="">
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-sm-8 col-xs-12 more_info">
-                    <h3>VIP CART</h3>
-                    <p>Çinici Club VIP Card-a bir il ərzində 5000 Azn və yuxarı məbləğdə alış-veriş etməklə sahib ola
-                      bilərsiniz. Kartın sizə təqdim etdiyi imtiyazlar: • Çinici mağalaralından edəcəyiniz hər
-                      alış-veriş məbləğinin 20%-ı bonus olaraq Çinici Club VIP Card-ınıza yüklənəcək. Endirimli
-                      məhsullarda isə 10% olaraq hesablanacaqdır. • Ad günü ərəfəsində, yəni ad gününüzdən öncəki və
-                      sonrakı 3 gün ərzində, edəcəyiniz alış-verişlərdə əlavə olaraq 10% bonus qazanacaqsınız. •
-                      Topladığınız bonuslar hər alış-verişinizdən bir gün sonra hesabınızın aktivinə əlavə ediləcək və
-                      Siz istədiyiniz zaman mağazalarımızdan edəcəyiniz alış-verişlərdə bu bonuslardan istifadə edə
-                      biləcəksiniz.(Bonusların etibarlılıq müddəti 1 ildir) • Çinici Club Card üzvləri üçün xüsusi
-                      olaraq nəzərdə tutulmuş kampaniyalardan istifadə edəcək, həmçinin ümumi kampaniyalar başlamadan
-                      öncə ilk Siz məlumatlandırılacaqsınız.</p>
-                    <a href="">Bonus: 5%</a>
-                  </div>
-
-                </div>
-              </div>
-
-            </article>
+            {% endfor %}
           </section>
         </div>
         <div class="graybox">
           <h1>HƏDİYYƏ KARTLARI</h1>
           <div class="d-flex">
             <div class="left col-md-4 col-sm-5 col-xs-12">
-              <img src="./images/cl_H0p73dF_f7Dt4U2.png" alt="">
+              <img src="{% static '/images/cl_H0p73dF_f7Dt4U2.png' %}" alt="">
             </div>
             <div class="center col-md-5 col-sm-4 col-xs-12">
               <div class="graybox_text_holder">
@@ -208,15 +96,13 @@
         </div>
       </div>
     </div>
-    </div>
-  </section>
+      {% endblock %}
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-  <script src="owl.carousel.min.js"></script>
-  <script src="/membership_card.js"></script>
-
+{% block js %}
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/membership_card.js' %}"></script>
+{% endblock %}
 </body>
 
 </html>

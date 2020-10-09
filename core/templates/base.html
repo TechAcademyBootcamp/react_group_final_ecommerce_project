@@ -20,13 +20,15 @@
      <link rel="stylesheet" href="{%static 'css/basket.css' %}" type="text/css" />
       <link rel="stylesheet" href="{%static 'css/checkout.css' %}" type="text/css" />
        <link rel="stylesheet" href="{%static 'css/sign_up.css' %}" type="text/css" />
-
+    {% block css %}
+    {% endblock %}
+    
 <body id="default" class="default">
     <div class="container-base">
 
         {% include 'includes/navbar.html' %}
 
-        {%block content%}
+        {% block content %}
         {% endblock %}
 
         {% include 'includes/footer.html' %}
@@ -39,18 +41,19 @@
     <script>window.jQuery || document.write('<script src="/static/oscar/js/jquery/jquery.min.js"><\/script>')</script>
     
     <!-- Twitter Bootstrap -->
-    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Oscar -->
-    <script src="{%static 'js/ui.js'%}"></script>
+    <script src="{% static 'js/ui.js' %}"></script>
     
     <!-- injector:js -->
-    <script src="{%static 'js/slick.js'%}"></script>
-    <script src="{%static 'js/slider.js'%}"></script>
-    <script src="{%static 'js/custom.js'%}"></script>
-    <script src="{%static 'js/main.js'%}"></script>
-    <script src="{%static 'js/price_range_script.js'%}"></script>
-    <script src="{%static 'js/popup.js'%}"></script>
-    
+    <script src="{% static 'js/slick.js'%}"></script>
+    <script src="{% static 'js/slider.js'%}"></script>
+    <script src="{% static 'js/custom.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/price_range_script.js' %}"></script>
+    <script src="{% static 'js/popup.js'%}"></script>
+    {% block js %}
+    {% endblock %}
 </body>
     
     </html>
