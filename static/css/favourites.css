@@ -1,0 +1,125 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+.section{
+    width: 100%;
+    background-color: #f8f8f8;
+
+}
+
+.container{
+  max-width: 1160px !important;
+  padding: 40px 0px 190px !important;
+  box-sizing: border-box;
+  margin: 0 auto;
+  
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+#leftside{
+    background-color: #fff;
+    max-width: 260px;
+    height: 413px ;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+#leftside p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #272727;
+    opacity: 0.72;
+    margin: 0;
+}
+#leftside h2{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #272727;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.filter{
+    margin-top: 25px;
+}
+.filter li a{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 45px;
+    color: #272727;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+    text-decoration: none;
+}
+.filter li a:hover {
+    text-decoration: underline;
+}
+.filter li .selected{
+    color: #e4013a;
+}
+#rightside{
+    background-color: #fff;
+    max-width: 860px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin-bottom: 148px;
+}
+#rightside p{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size:16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+.wishlist label{
+    margin-right: 40px;
+}
+
+
+#rightside .wishlist{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 40px;
+
+}
+#rightside .wishlist  select{
+    color: #212529;
+    -webkit-appearance: none;
+    background-image: url(/static/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px);
+    padding: 0px 30px 0px 20px;
+    height: 45px;
+    box-sizing: border-box;  
+    border: 1px solid #DCDCDC;
+    background-color: #ffffff;
+}
+
+#favcheck{
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-left: 60px;
+    margin-right: 10px;
+}
+.wishlist_row p{
+    font-size: 14px !important;
+}
+
