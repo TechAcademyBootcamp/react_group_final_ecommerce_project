@@ -188,8 +188,9 @@ input[type="checkbox" i] {
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
+
 .registration-container .registration-btn {
     display: flex;
     justify-content: center;

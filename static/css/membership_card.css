@@ -90,7 +90,7 @@
 
 .active:hover p{
     text-decoration: none !important;
-    color: #e4013a;
+    /* color: #e4013a; */
 }
 
 .active:hover{
@@ -147,7 +147,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 
 .info{
     padding: 30px;

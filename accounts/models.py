@@ -14,3 +14,6 @@ class User(AbstractUser):
     birthday = models.DateField(_('Birthday'), null=True, blank=True)
     phone_number = models.CharField(_('Phone number'), null=True, blank=True, max_length=15, validators=(phone_number_validator,))
     card_number = models.CharField(_('Card number'), null=True, blank=True, max_length=20, validators=(credit_card_validator,))
+
+
+   
