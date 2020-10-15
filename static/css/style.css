@@ -376,12 +376,13 @@ body{
     font-size: 1.4rem;
     line-height: 1.7rem;
     text-align: center;
-    color: #272727;
+    color: #272727 !important;
 
 }
 .age-filter-item.active > a,
 .age-filter-item > a:hover {
     background-color: #EEEEEE;
+    
 }
 .age-filter-item .age-filter-container {
     display: none;

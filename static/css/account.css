@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
 }
-#leftside{
+#leftside1{
     background-color: #fff;
     max-width: 260px;
     height: 365px ;
@@ -28,7 +28,7 @@
     padding-right: 40px;
     box-sizing: border-box;
 }
-#leftside p{
+#leftside1 p{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 17px;
@@ -36,7 +36,7 @@
     opacity: 0.72;
     margin: 0;
 }
-#leftside h2{
+#leftside1 h2{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -48,6 +48,7 @@
 }
 .filter{
     margin-top: 25px;
+    list-style: none;
 }
 .filter li a{
     font-family: 'Montserrat', sans-serif;
@@ -70,14 +71,14 @@
 .filter li .selected{
     color: #e4013a;
 }
-#rightside{
+#rightside1{
     background-color: #fff;
     max-width: 860px;
     padding: 40px;
     box-sizing: border-box;
     margin-bottom: 148px;
 }
-#rightside p{
+#rightside1 p{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -85,7 +86,7 @@
     line-height: 20px;
     margin: 0;
 }
-#rightside form {
+#rightside1 form {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -98,7 +99,7 @@
     flex-wrap: wrap;
 }
 
-#rightside form input{
+#rightside1 form input{
     width: 380px;
     height: 45px;
     box-sizing: border-box;
@@ -109,7 +110,7 @@
     background-color: #ffffff;
     font: 400 13.3333px Arial;
 }
-#rightside form input::placeholder{
+#rightside1 form input::placeholder{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -122,7 +123,7 @@
 
 /* placeholder font styles and etc. above !! */
 
-#rightside form label{
+#rightside1 form label{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -131,10 +132,10 @@
     margin-bottom: 0;
     font-weight: inherit;
 }
-#rightside form label select{
+#rightside1 form label select{
     color: #A5A5A5;
     -webkit-appearance: none;
-    background-image: url(/static/arrow-down.png);
+    background-image: url(../images/arrow-down.png);
     background-repeat: no-repeat;
     background-position: calc(100% - 20px);
     background-size: 10px 5px;
@@ -148,7 +149,7 @@
     margin-bottom: 0px;
     background-color: #ffffff;
 }
-#rightside .save{
+#rightside1 .save{
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -167,7 +168,7 @@
     border: none;
     cursor: pointer;
 }
-#rightside .space{
+#rightside1 .space{
     display: block;
     height: 0px;
     width: 50px;
