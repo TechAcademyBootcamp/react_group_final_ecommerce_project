@@ -1,5 +1,7 @@
+from datetime import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
 
 
 class Category(models.Model):
@@ -44,6 +46,21 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+    
+    @property
+    def main_image(self):
+        return self.product_images.all().order_by('is_main').first()
+    
+    @property
+    def discount_price(self):
+        today = datetime.now()
+        discount_price_obj = self.product_discounts.filter(deadline__gte = today, is_active = True).last()
+        if discount_price_obj:
+            if discount_price_obj.discount_type == 1 :
+                return '%.2f'%(self.price - ((self.price * discount_price_obj.discount_amount)/100))
+            return self.price - discount_price_obj.discount_amount    
+
+        return 0
 
 
 class ProductImage(models.Model):
@@ -63,7 +80,7 @@ class ProductImage(models.Model):
         ordering = ('order', '-created_at',)
 
     def __str__(self):
-        return self.product
+        return self.product.title
 
 
 class PropertyName(models.Model):
@@ -129,12 +146,12 @@ class ProductProperties(models.Model):
 
 class ProductDiscount(models.Model):
     CHOICES_DISCOUNT = (
-        ('1', _('Faiz')),
-        ('2', _('Manat')),
+        (1, _('Faiz')),
+        (2, _('Manat')),
     )
     products = models.ManyToManyField(Product, verbose_name=_('Product Discounts'), related_name='product_discounts',)
     compaign = models.CharField(_('Compaign'), max_length=120)
-    discount_type = models.BooleanField(_('Discount Type'),choices=CHOICES_DISCOUNT)
+    discount_type = models.IntegerField(_('Discount Type'),choices=CHOICES_DISCOUNT)
     discount_amount = models.DecimalField(_('Discount Amount'),max_digits=7, decimal_places=2)
     deadline = models.DateTimeField(_('Deadline'),)
     is_active = models.BooleanField(_('Is Active'), default=True)

@@ -12,9 +12,9 @@
                         <div class="main-slider-item">
                             <div class="slider-item-image">
                                 <picture>
-                                    <source media="(min-width:960px)" srcset="{%static '/media/slides/ipad/01a.png'%}">
-                                    <source media="(min-width:500px)" srcset="{%static '/media/slides/Fever-1-mob.png'%}">
-                                    <img src="{%static '/media/slides/01a_U1O2IZb.png'%}" alt="Flowers" style="width:auto;">
+                                    <source media="(min-width:960px)" srcset="{% static '/images/01a.png'%}">
+                                    <source media="(min-width:500px)" srcset="{% static '/images/Shoes_Slider_web.png' %}">
+                                    <img src="{% static './images/AA002.png' %}" alt="Flowers" style="width:auto;">
                                 </picture>
                             </div>
                             <div class="text-box">
@@ -29,8 +29,8 @@
                         <div class="main-slider-item">
                             <div class="slider-item-image">
                                 <picture>
-                                    <img src="{%static 'media/slides/coper_y6BQopl.png'%}" alt="Flowers" style="width:auto;">
-
+                                    <img src="{% static './images/coper_y6BQopl.png'%}" alt="Flowers" style="width:auto;">
+                                     <img src="{% static './images/coper_y6BQopl.png' %}" alt="">
                                 </picture>
                             </div>
                             <div class="text-box">
@@ -46,7 +46,7 @@
                         <div class="main-slider-item">
                             <div class="slider-item-image">
                                 <picture>
-                                    <img src="{%static '/media/slides/AA002.png'%}" alt="Flowers" style="width:auto;">
+                                    <img src="{%static '/images/AA002.png'%}" alt="Flowers" style="width:auto;">
                                 </picture>
                             </div>
                             <div class="text-box">
@@ -61,7 +61,7 @@
                         <div class="main-slider-item">
                             <div class="slider-item-image">
                                 <picture>
-                                    <img src="{%static '/media/slides/Shoes_Slider_web.png'%}" alt="Flowers" style="width:auto;">
+                                    <img src="{%static '/images/Shoes_Slider_web.png'%}" alt="Flowers" style="width:auto;">
 
                                 </picture>
                             </div>
@@ -93,15 +93,15 @@
                     <h2>KOLLEKSIYA 2020</h2>
                     <div class="flex-container">
                         <a class="new-collection-box" href="/collection/woman/all/">
-                            <img src="{% static '/media/categories/Qadin-kollek.png' %}" alt="Qadın" />
+                            <img src="{% static '/images/Qadin-kollek.png' %}" alt="Qadın" />
                             <h5>QADIN</h5>
                         </a>
                         <a class="new-collection-box" href="/collection/man/all/">
-                            <img src="{% static '/media/categories/Kisi-kollek.png'%}" alt="KİŞİ" />
+                            <img src="{% static '/images/Kisi-kollek.png'%}" alt="KİŞİ" />
                             <h5>KİŞİ</h5>
                         </a>
                         <a class="new-collection-box" href="/collection/kids/all/">
-                            <img src="{% static '/media/categories/Usaq-kollek.png' %}" alt="Uşaq" />
+                            <img src="{% static '/images/Usaq-kollek.png' %}" alt="Uşaq" />
                             <h5>UŞAQ</h5>
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                 <div class="div-1110">
                     <div class="flex-container-second">
 
-                        <div class="bottom-content-box" style="background-image: url({%static '/media/images/main/bags.png'%});">
+                        <div class="bottom-content-box" style="background-image: url({%static '/images/bags.png' %});">
                             <div class="new-collection-item-opacity"></div>
                             <div class="content">
                                 <h2>QADIN ÇANTALARI</h2>
@@ -120,7 +120,7 @@
                         </div>
 
                         <div class="bottom-content-box"
-                            style="background-image: url({%static '/media/images/main/man-acc.png'%});">
+                            style="background-image: url({%static '/images/man-acc.png' %});">
                             <div class="new-collection-item-opacity"></div>
                             <div class="content">
                                 <h2>KİŞİ AKSESUARLARI</h2>
@@ -148,6 +148,7 @@
                     </div>
                 </div>
                 <div class="flex-container-third">
+                    {% for product in product_list %}
                     <a href="/catalogue/woman/fever-qadin-tk_10597/" class="product-item">
                         <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
                             <meta itemprop="description" content="Fever Qadın Ətək" />
@@ -161,10 +162,10 @@
                             <meta itemprop="url" content="/catalogue/woman/fever-qadin-tk_10597/">
 
 
-                            <img itemprop="image" src="{%static 'media/84c397bc7e3100cda38c23450d26afe2.jpg'%}" />
+                            <img itemprop="image" src="{{product.main_image.image.url}}" />
                         </div>
                         <div>
-                            <h5 itemprop="name" class="name">Fever Qadın Ətək</h5>
+                            <h5 itemprop="name" class="name">{{product.title}}</h5>
                             <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
 
                                 <meta content="66.50" itemprop="price">
@@ -186,16 +187,22 @@
                                 <meta itemprop="name" content="Cinici" />
                             </div>
                             <meta itemprop="mpn" content="84727" />
-                            <p itemprop="sku" class="code">Kod: 84727</p>
+                            <p itemprop="sku" class="code">Kod: {{product.code}}</p>
 
                             <p class="price">
-                                <span class="line-through">₼ 95,00</span>
-                                <span class="pink">₼ 66,50</span>
+                                {% if product.discount_price %}
+                                <span class="line-through">₼ {{product.price}}</span>
+                                <span class="pink">₼ {{product.discount_price}}</span>
+                                {%else%}
+                                <span>₼ {{product.price}}</span>
+                                {% endif %}
+
                             </p>
 
                         </div>
                     </a>
-                    <a href="/catalogue/woman/alkis-qadin-bluz_9077/" class="product-item">
+                    {% endfor %}
+                    <!-- <a href="/catalogue/woman/alkis-qadin-bluz_9077/" class="product-item">
                         <div itemscope itemtype="http://schema.org/Product" class="product-image-container">
                             <meta itemprop="description" content="Alkış Böyük Bədən Qadın Bluz" />
 
@@ -521,7 +528,7 @@
                             </p>
 
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>

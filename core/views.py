@@ -1,11 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 
 from core.models import Bonuse
+from core.models import Product
+from core.models import ProductImage
 
 
-def index(request):
-    return render(request,'index.html')
+
+# def index(request):
+#     return render(request,'index.html')
 
 def product(request):
     return render(request,'product.html')
@@ -30,3 +33,11 @@ def sign_up(request):
 class BonuseListView(ListView):
     model = Bonuse
     template_name = 'membership_card.html'
+
+class IndexTemplateView(TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super().get_context_data(*args,**kwargs)
+        context['product_list'] = Product.objects.all()[:8]
+        return context
