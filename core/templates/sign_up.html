@@ -7,39 +7,52 @@
  <div class="registration-container">
         <div class="registration-content">
             <div class="registration-box">
-                <form id="register_form" action="." method="post" class="form-stacked">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='DTbMq1NXRAhNDurFwAN2naMnjJLhnE8vhsRgkevKCLnGoNiVVEvrN468N8sS5Apb' />
+                <form id="register_form" action="" method="post" class="form-stacked">
+                {% csrf_token %}
+                    
                     <p class="title">QEYDİYYAT</p>
                     <div class="upper-side">
                         
                             <label class="input-container" for="id_first_name">
-                                <span class="label-text">Ad</span>
-                                <input type="text" name="first_name" placeholder="Ad daxil edin" maxlength="255" required id="id_first_name" />
+                            {{form.username.label_tag}}
+                                {{form.username}}
+                                {{form.username.errors}}
+                                {% comment %} <input type="text" name="first_name" placeholder="Ad daxil edin" maxlength="255" required id="id_first_name" /> {% endcomment %}
                             </label>
                         
                             <label class="input-container" for="id_last_name">
-                                <span class="label-text">Soyad</span>
-                                <input type="text" name="last_name" placeholder="Soyad daxil edin" maxlength="255" required id="id_last_name" />
+                            {{form.last_name.label_tag}}
+                                {{form.last_name}}
+                                {{form.last_name.errors}}
+                                {% comment %} <input type="text" name="last_name" placeholder="Soyad daxil edin" maxlength="255" required id="id_last_name" /> {% endcomment %}
                             </label>
                         
                             <label class="input-container" for="id_email">
-                                <span class="label-text">E-poçt</span>
-                                <input type="email" name="email" placeholder="hello@gmail.com" required id="id_email" />
+                            {{form.email.label_tag}}
+                                {{form.email}}
+                                {{form.email.errors}}
+                                {% comment %} <input type="email" name="email" placeholder="hello@gmail.com" required id="id_email" /> {% endcomment %}
                             </label>
                         
                             <label class="input-container" for="id_phone">
-                                <span class="label-text">Telefon</span>
-                                <input type="text" name="phone" placeholder="050 123 45 67" maxlength="255" id="id_phone" />
+                            {{form.phone_number.label_tag}}
+                                {{form.phone_number}}
+                                {{form.phone_number.errors}}
+                                {% comment %} <input type="text" name="phone" placeholder="050 123 45 67" maxlength="255" id="id_phone" /> {% endcomment %}
                             </label>
                         
                             <label class="input-container" for="id_password1">
-                                <span class="label-text">Şifrə</span>
-                                <input type="password" name="password1" placeholder="****" required id="id_password1" />
+                            {{form.password1.label_tag}}
+                                {{form.password1}}
+                                {{form.password1.errors}}
+                                {% comment %} <input type="password" name="password1" placeholder="****" required id="id_password1" /> {% endcomment %}
                             </label>
                         
                             <label class="input-container" for="id_password2">
-                                <span class="label-text">Şifrənin təkrarı</span>
-                                <input type="password" name="password2" placeholder="****" required id="id_password2" />
+                            {{form.password2.label_tag}}
+                                {{form.password2}}
+                                {{form.password2.errors}}
+                                {% comment %} <input type="password" name="password2" placeholder="****" required id="id_password2" /> {% endcomment %}
                             </label>
                         
                         <input type="hidden" name="redirect_url" id="id_redirect_url"
@@ -57,6 +70,7 @@
                     </div>
                 </form>
             </div>
+            
         </div>
         
     </div>
