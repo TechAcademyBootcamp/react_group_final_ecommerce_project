@@ -417,7 +417,7 @@ body{
     min-width: 12rem;
 }
 .age-filter-container.filter_aksessuarlar {
-    right: 0rem;
+    /* right: 0rem;                 ******************************** */
     padding: 2rem 3rem 3rem;
 }
 .filter-content-left-side,
@@ -729,7 +729,31 @@ h1{
     margin-top: 0;
 }
 h1.white {
-     color: #ffffff;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.864px;
+    margin-bottom: 24.12px;
+}
+h1.slider-title.white{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.864px;
+    margin-bottom: 24.12px;
+}
+h1.slider-title{
+    color: #272727;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.864px;
+    margin-bottom: 24.12px;
 }
 
 .home-btn, .bottom-content-box a{
@@ -775,6 +799,7 @@ h1.white {
     position: absolute;
     z-index: 1;
     top: 0;
+
 }
 
 .slader-remote{
@@ -908,6 +933,9 @@ h1.white {
     position: absolute;
     bottom: 4rem;
     left: 4rem;
+}
+.content a{
+    color: #272727 !important;
 }
 .basket-card .card-right .content {
     position: initial;
