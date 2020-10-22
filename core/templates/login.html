@@ -1,31 +1,33 @@
 {%extends 'base.html'%}
 {%block content%}
-
-        <!-- Login Start -->
-
-        <div class="login-container">
-            <div class="login-content">
-                <div class="login-box">
-                    <div>
-                        <p>HESABA DAXİL OL</p>
-                        <form id="login_form" >
-                                <label for="id_login-username">E-poçt</label>
-                                <input type="email" >
-                                <label for="id_login-password">Parol</label>
-                                <input type="password">
-                            <input type="hidden"  id="id_redirect_url" >
-                            <button class="first-btn" type="submit">DAXİL OL</button>
-                        </form>
-                        <p class="forget-password">Şifrəni unutdun?</p>
-                        <a class="second-btn" href="/accounts/register/">QEYDİYYAT</a>
-                    </div>
+      <div class="login-container">
+        <div class="login-content">
+            <div class="login-box">
+                <div>
+                    <p>HESABA DAXİL OL</p>
+                    <form id="login_form" action="" method="post">
+                    {% csrf_token %}
+                        
+                        <input type="hidden" name="login_submit" value="Log In">
+                        
+                            <label for="id_login-username">Username</label><br>
+                            <input type="text" name="username" required id="id_login-username" />
+                        
+                            <label for="id_login-password">Parol</label><br>
+                            <input type="password" name="password" required id="id_login-password" />
+                        
+                        <input type="hidden" name="login-redirect_url" id="id_redirect_url"
+                               value="/accounts/orders/">
+                        <button class="first-btn" name="login_form" type="submit">DAXİL OL</button>
+                    </form>
+                    {%for message in messages%}
+                        <p id="messages">{{message}}</p>
+                    {%endfor%}
+                    <p class="forget-password">Şifrəni unutdun?</p>
+                    <a class="second-btn" href="{% url 'sign_up' %}">QEYDİYYAT</a>
                 </div>
-                
             </div>
-        </div>
-
-        <!-- Login End -->
             
-
-
+        </div>
+    </div>
 {%endblock%}
