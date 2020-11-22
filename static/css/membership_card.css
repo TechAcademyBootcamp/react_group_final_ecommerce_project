@@ -1,0 +1,314 @@
+.section{
+    width: 100%;
+
+}
+.container{
+    max-width: 1160px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    margin-right: 63px !important;
+    margin-left: 63px !important;
+}
+.row{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.head{
+    margin-top: 45px;
+}
+.head h1{
+    text-align: center;
+    color: #313131 !important;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.864px;
+    margin-top: 0;
+    
+}
+.head h1::before{
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: #797979;
+    position: absolute;
+    top: 10px;
+    margin-left: -105px;
+
+}
+.head h1::after{
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: #797979;
+    position: absolute;
+    top: 10px;
+    margin-left: 25px;
+}
+.head p{
+    margin-top: 25px;
+}
+.row{
+    margin-right: -10px !important;
+    margin-left: -10px !important;
+}
+.menu{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.owl-item{
+    /* width: 277.5px !important; */
+    margin-right: 10px;
+}
+.card_des{
+    text-align: center;
+    padding: 25px;
+}
+
+.card_des::after{
+    content: '';
+    width: 1px;
+    height: 69px;
+    opacity: 0.67;
+    background-color: #cccccc;
+    position: absolute;
+    right: -5px;
+    display: inline-block;
+    top: 35%;
+    transform: translateY(-35%);
+}
+.active{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.active:hover p{
+    text-decoration: none !important;
+    /* color: #e4013a; */
+}
+
+.active:hover{
+    text-decoration: none;
+}
+.cardimg1{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    padding-top: 62%;
+    background-image: url(./images/Basic.svg);
+}
+.cardimg2{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    padding-top: 62%;
+    background-image: url(./images/Gold.svg);
+}
+.cardimg3{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    padding-top: 62%;
+    background-image: url(./images/Platinum.svg);
+}
+.cardimg4{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    padding-top: 62%;
+    background-image: url(./images/Vip.svg);
+}
+.card_des p{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 20px 0;
+    color: #8a8a8a;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info{
+    padding: 30px;
+    border: 1px solid #cccccc;
+    margin: 20px 0;
+    display: flex;
+}
+.card_image{
+    box-shadow: 0 14px 28px 0 rgba(0,0,0,0.5);
+    width: 80%;
+    border-radius: 10px;
+}
+.card_image img{
+    width: 100%;
+    object-fit: contain;
+    box-shadow: unset;
+    border-radius: 10px;
+}
+.card_image::after{
+    content: '';
+    width: 1px;
+    height: 32.5%;
+    opacity: 0.67;
+    background-color: #cccccc;
+    position: absolute;
+    display: inline-block;
+    right: 10%;
+    top: 29%;
+    transform: translateX(-10%) translateY(-40%);
+}
+.more_info{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #313131;
+    font-family: 'Montserrat', sans-serif;
+}
+.more_info h3{
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+.more_info p{
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.92;
+    letter-spacing: normal;
+    text-align: left;
+    color: #797979;
+    font-size: 14px;
+    margin: 0;
+}
+.more_info a{
+    width: 135px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    background: #e4013a;
+    border: 1px solid transparent;
+    color: white;
+    margin-top: 10px;
+    font-weight: 300;
+    text-decoration: none !important;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.2s;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+
+}
+.more_info a:hover{
+    color: white ;
+}
+.menu_item{
+    display: none;
+}
+.item_active{
+    display: block ;
+}
+.item.cart-active p{
+    color: #e4013a;
+}
+.graybox{
+    padding: 30px;
+    margin: 20px 0 40px;
+    background-image: linear-gradient(to right, #f4f4f4,#e9e9e9);
+    width: 100%;
+    float: left;
+}
+.graybox h1{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.864px;
+    color: #272727;
+    margin-top: 0;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.d-flex>div {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    float: unset;
+}
+.d-flex img{
+    margin-right: 158.328px;
+}
+.graybox_text_holder{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.graybox_text_holder span{
+    font-family: 'Montserrat', sans-serif;
+    color: #ee2e54;
+    font-weight: 500;
+}
+.right11 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: 1px solid #404040;
+    color: #404040;
+    background-color: transparent;
+    transition: .5s;
+    font-weight: 300;
+    text-decoration: none !important;
+}
+.right11 a:hover{
+    background-color: #404040 !important;
+    color: #e9e9e9 !important;
+}
+
+.card_des > .active:hover p{
+    text-decoration: none !important;
+    color: #e4013a;
+}

@@ -1,0 +1,234 @@
+html {
+    font-size: 10px;
+}
+div {
+    display: block;
+}
+.registration-container {
+    width: 100%;
+    margin-top: 12rem;
+    padding-bottom: 14rem;
+    background-color: #f8f8f8;
+    border-bottom: 0.1rem solid #DCDCDC;
+}
+.registration-container .registration-content {
+    padding-top: 4rem;
+}
+.registration-container .registration-box {
+    background-color: #fff;
+    width: 64rem;
+    margin: 0 auto;
+    padding: 2.5rem 4rem 4rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.registration-container .registration-box input {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #272727;
+}
+
+input[type="hidden" i] {
+    display: none;
+    appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+.registration-container .registration-box .title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #272727;
+    text-align: center;
+    border-bottom: 0.1rem solid rgba(201,201,201, 0.5);
+    padding-bottom: 1.5rem;
+    margin: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.registration-container .upper-side {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.registration-container .upper-side {
+    margin-top: 2rem;
+}
+.registration-container .registration-box label, .registration-container .registration-box input {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #272727;
+}
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(50% - 2rem);
+}
+label {
+    cursor: default;
+}
+.input-container .label-text {
+    display: block;
+    width: 100%;
+}
+.registration-container .upper-side input {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #272727;
+    width: 100%;
+    height: 4.5rem;
+    border: 0.1rem solid #DCDCDC;
+    box-sizing: border-box;
+    padding: 1.45rem 2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 2rem;
+}
+.input-container input {
+    width: 100%;
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    align-items: center;
+    margin-top: 1.7rem;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: checkbox;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 0.1rem solid #8D8D8D;
+}
+.registration-container .below-side p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin: 0rem;
+}
+.blue-text {
+    color: #1A9CFF;
+    text-decoration: underline;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.registration-container .registration-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #272727;
+    width: 28rem;
+    height: 5rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin: 0 auto;
+    margin-top: 3.6rem;
+    border: none;
+}
+button {
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}

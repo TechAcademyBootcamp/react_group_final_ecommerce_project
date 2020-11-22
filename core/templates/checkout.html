@@ -1,0 +1,96 @@
+{% extends  'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="add-white-space"></div>
+<section id="proceed-to-payment">
+    <div class="container">
+        <form class="wrapper" action="/checkout/shipping-address/" method="post" id="new_shipping_address" onsubmit="return formValid();">
+            <input type='hidden' name='csrfmiddlewaretoken' value='c0vEBxkyUK2O3gomvcVYN6CSgaxbocmUQzb8vK2lFV8HOzfCUgDnd0WDKzeM68DA' />
+            <div class="col-left">
+                    <div class="personal-info-box">
+                    <h4 class="title">Şəxsi Məlumatlar</h4>
+                    <div class="form-wrapper">
+                            <div class="input-wrapper">
+                                <label for="">Ad *</label>
+                                <input type="text" name="first_name" class="required " maxlength="255" id="id_first_name" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="">Soyad *</label>
+                                 <input type="text" name="last_name" class="required " maxlength="255" id="id_last_name" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="phone-no">Telefon *</label>
+
+                                <div class="inputHolder">
+                                    <span>+994</span>
+                                    <input class="required" type="text" name="phone_number" id="phone-no" placeholder="(50) 123-45-67">
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="">ÇİNİCİ müştəri kodu (əgər varsa)</label>
+                                <input type="text" name="user_ID" id="customer-code" placeholder="0000  0000  0000  0000">
+                            </div>
+                        <div class="input-wrapper hide-select">
+                            <label for="">Şəhər * </label>
+                            <div class="select-item"><select name="line1" maxlength="255" id="id_line1" class="s-hidden">
+                                <option value="Baku">Bakı</option>
+                                <option value="Xirdalan">Xırdalan</option>
+
+            </select><div class="styledSelect">Bakı</div><ul style="display: none;"><li rel="Baku">Bakı</li><li rel="Xirdalan">Xırdalan</li></ul></div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="">Çatdırılacaq ünvan * </label>
+                            <input type="text" name="line2" class="required " placeholder="Nərimanov ray., Ə. Əliyev küçəsi" maxlength="255" id="id_line2" />
+                        </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="">Qeyd</label>
+                            <textarea name="notes" cols="30" rows="4" id="id_notes"></textarea>
+                        </div>
+
+                </div>
+                </div>
+            <div class="col-right">
+                <div class="submit-order">
+                    <ul class="prod-info">
+                        <li>
+                            <p>Məhsullar (1)</p>
+                            <p>95,00 ₼</p>
+                        </li>
+                        <li>
+                            <p>Endirim</p>
+                            <p>-28,50 ₼</p>
+                        </li>
+                        <li>
+                            <p>Çatdırılma</p>
+                            <p>0,00 ₼</p>
+                        </li>
+                        <span>50 ₼-dən yuxarı alış-verişlərdə çatdırılma pulsuz!</span>
+                    </ul>
+                    <div class="title">
+                        <h4>Cəmi</h4>
+                        <span>66,50 ₼</span>
+                    </div>
+                    <p style="display:none" id="service_terms_error_nofication"> Xidmət şərtləri ile razılaşın</p>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="approve" required="required">
+                        <label for="approve"><a href="" data-toggle="modal" data-target="#service-terms">Xidmət şərtlərini</a> oxudum və qəbul edirəm</label>
+                    </div>
+                    <button type="button" class="button-green submit-payment">Sifarişə davam et</button>
+                </div>
+
+                <div class="order-info">
+                 
+                    <span>Sifarişləriniz 1-3 gün ərzində çatdırılır.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+        </div>
+    </div>
+ {%endblock%}

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+
+  
+  
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/membership_card.css' %}">
+
+{% endblock %}
+
+      {% block content %}
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12 head">
+          <h1>ÜZVLÜK KARTLARI</h1>
+          <p></p>
+
+        </div>
+        <div class="col-md-12 menu">
+          <div class="menutabs">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 10px; padding-right: 10px;">
+                <div class="owl-carousel owl-theme">
+                  {% for bonuse in bonuse_list %}
+                  <div class="item {% if forloop.counter is 1 %} cart-active {% endif %}" data-show-item="#show-item-{{bonuse.id}}">
+                    <div class="card_des">
+                      <a href="#" class="active">
+                        <div class="cardimg1" style="background-image: url('{{ bonuse.image.url}}');"></div>
+                        <p>{{bonuse.title}}</p>
+                      </a>
+                    </div>
+                  </div>
+                  {% endfor %}
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="menuwrapper">
+            {% for bonuse in object_list %}
+            <article id="show-item-{{bonuse.id}}" class="menu_item {% if forloop.counter == 1 %} item_active {% endif %}">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 info">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="card_image">
+                      <img src="{{bonuse.image.url}}" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 col-xs-12 more_info">
+                    <h3>{{bonuse.title|upper}} CART</h3>
+                    <p>{{bonuse.description}}</p>
+                    <a href="">Bonus: {{bonuse.bonuse}}%</a>
+                  </div>
+
+                </div>
+              </div>
+
+            </article>
+            {% endfor %}
+          </section>
+        </div>
+        <div class="graybox">
+          <h1>HƏDİYYƏ KARTLARI</h1>
+          <div class="d-flex">
+            <div class="left col-md-4 col-sm-5 col-xs-12">
+              <img src="{% static '/images/cl_H0p73dF_f7Dt4U2.png' %}" alt="">
+            </div>
+            <div class="center col-md-5 col-sm-4 col-xs-12">
+              <div class="graybox_text_holder">
+                Sevdiklərini Çinici
+
+                <br>
+                <span>
+                    HƏDİYYƏ KARTI
+
+                </span><br>
+                ilə sevindir!
+                Daha çox al!
+              </div>
+
+
+            </div>
+            <div class="right11 col-sm-3 col-xs-12">
+              <a href="">Ətraflı</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {% endblock %}
+
+
+{% block js %}
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/membership_card.js' %}"></script>
+{% endblock %}
+</body>
+
+</html>

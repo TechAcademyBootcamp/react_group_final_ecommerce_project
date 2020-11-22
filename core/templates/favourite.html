@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="favourites.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+        <div class="section">
+        <div class="container">
+            <div class="row">
+              <div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12" id="leftside" >
+                    <p>Xoş gəlmisiniz</p>
+                    <h2>Tural Safarli</h2>
+                    <ul class="filter">
+                        <li><a href="">Sifarişlərim <img src="/static/arrow right.png" alt=""></a></li>
+                        <li><a href="">Bonuslar <img src="/static/arrow right.png" alt=""></a></li>
+                        <li><a  href="">Tənzimləmələr <img src="/static/arrow right.png" alt=""></a></li>
+                        <li><a class="selected"  href="">Bəyənilənlər <img src="/static/arrow right.png" alt=""></a></li>
+                        <li><a href="">Şifrəni dəyiş <img src="/static/arrow right.png" alt=""></a></li>
+                        <li><a href="">Çıxış <img src="/static/arrow right.png" alt=""></a></li>
+                    </ul>
+
+                 
+                  
+
+              </div>
+              <div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12" id="rightside">
+                  <p>Bəyənilənlər</p>
+                  <div class="wishlist">
+                    <label for="">Sırala</label>
+                    <select name="favourite" required="" id="id_favourite">
+                      <option value="" selected="">Ən yenilər</option>
+                    
+                      <option value="1">Qiymət (Artan)</option>
+                    
+                      <option value="2">Qiymət (Azalan)</option>
+                    
+                    </select>
+                    <input type="checkbox" name="" id="favcheck">
+                    <span>Tükənən məhsulları göstərmə</span>
+                  </div>
+                  <div class="wishlist_row">
+                    <p>Bəyənilənlər siyahınızda məhsul tapılmadı.</p>
+                  </div>
+                      
+                 
+               
+
+              </div>
+
+            </div>
+        </div>
+    </div>
+           
+
+    
+
+ 
+</body>
+
+</html>

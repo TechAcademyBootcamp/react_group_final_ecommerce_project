@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+    
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  -->
+     <!-- <link rel="stylesheet" href="reset.css">  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+{% endblock %}
+<!-- </head>
+
+<body> -->
+
+  {% block content %}
+        <div class="section">
+        <div class="container">
+            <div class="row">
+              <div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12" id="leftside1" >
+                    <p>Xoş gəlmisiniz</p>
+                    <h2>Tural Safarli</h2>
+                    <ul class="filter">
+                        <li><a href="">Sifarişlərim <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                        <li><a href="">Bonuslar <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                        <li><a class="selected"  href="">Tənzimləmələr <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                        <li><a href="">Bəyənilənlər <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                        <li><a href="">Şifrəni dəyiş <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                        <li><a href="">Çıxış <img src="{% static '/images/arrow right.png' %}" alt=""></a></li>
+                    </ul>
+
+                 
+                  
+
+              </div>
+              <div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12" id="rightside1">
+                  <p>Tənzimləmələr</p>
+                  <form action="" method="POST">
+                    {{form.non_field_errors}}
+                      {% csrf_token %}
+                      <input type="hidden">
+                      <label for="">
+                          Ad 
+                          {{form.first_name}}
+                          {{form.first_name.errors}}
+                          <!-- <input type="text" name="first_name" value="Tural" placeholder="Adınızı daxil edin" maxlength="255" id="id_first_name"> -->
+                      </label>
+                      <label for="">
+                          Soyad
+                          {{form.last_name}}
+                          {{form.last_name.errors}}
+                          <!-- <input type="text" name="last_name" value="Safarli" placeholder="Soyadınızı daxil edin" maxlength="255" id="id_last_name"> -->
+                      </label>
+                      <label for="">
+                          Cinsiyyət 
+                          {{form.gender}}
+                          {{form.gender.errors}}
+                          <!-- <select name="gender" required="" id="id_gender">
+                            <option value="" selected="">Cinsiyyətinizi seçin</option>
+                          
+                            <option value="1">Kişi</option>
+                          
+                            <option value="2">Qadın</option>
+                          
+                          </select> -->
+                      </label>
+                      <label for="">
+                        Doğum tarixi
+                        {{form.birthday}}
+                        {{form.birthday.errors}}
+                        <!-- <input type="text" name="birthday" placeholder="Gün/Ay/İl" id="id_birthday"> -->
+                      </label>
+                      <label for="">
+                          Telefon
+                          {{form.phone_number}}
+                          {{form.phone_number.errors}}
+                          <!-- <input type="text" name="phone" value="+994551234567" placeholder="050 123 45 67" maxlength="255" id="id_phone"> -->
+                      </label>
+                      <label for="">
+                        E-poçt
+                        {{form.email}}
+                        {{form.email.errors}}
+                        <!-- <input type="email" name="email" value="sfrl263@gmail.com" placeholder="hello@gmail.com" required="" disabled="" id="id_email"> -->
+                      </label>
+                      <label for="">
+                        Çinici üzvlük kartı (əgər varsa)
+                        {{form.card_number}}
+                        {{form.card_number.errors}}
+                        <!-- <input type="text" name="cinici_card" placeholder="0000 0000 0000 0000" maxlength="255" id="id_cinici_card"> -->
+                      </label>
+                      <label for="">
+                        Ünvan
+                        {{form.address}}
+                        {{form.address.errors}}
+                        <!-- <input type="text" name="place" placeholder="Bakı, Cəfər xəndan,40" required="" id="id_place"> -->
+                      </label>
+                      <!-- {{form.as_table}} -->
+                      <span class="space"></span>
+                      <button type="submit" class="save">Yadda Saxla</button>
+                      
+                  </form>
+                  {% if messages %}
+                      <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+               
+
+              </div>
+
+            </div>
+        </div>
+    </div>
+           
+
+    
+  {% endblock %}
+ 
+</body>
+
+</html>
